@@ -1,0 +1,50 @@
+<style>
+    section {
+        padding: 15px;
+    }
+</style>
+
+<section class="property-binding">
+    <article>
+        <h3>Interpolation/Interpolação</h3>
+        <p>String renderizada com interpolação: {{ url }}</p>
+        <p>1 + 1 = {{ 1 + 1 }}</p>
+        <p>1 + 1 + 1 não é {{ 1 + 1 + getValor()}}</p>
+        <p>{{ getTrue() && 1 == 1}}</p>
+    </article>
+
+    <article>
+        <h3>Property Binding</h3>
+        <img src="{{ urlImg }}">
+        <img [src]="urlImg">
+        <img bind-src="urlImg">
+    </article>
+
+    <article>
+        <h3>Class e Style Binding</h3>
+        <div>
+            <select #classe (change)="0">
+                <option value="alert-success">Sucesso</option>
+                <!-- <option value="alert-info">Info</option> -->
+                <option value="alert-warning">Alerta</option>
+                <option value="alert-danger">Erro</option>
+            </select>
+        </div>
+
+        <br><br>
+
+        <div class="alert {{ classe.value }}" role="alert">
+            Texto colorido
+        </div>
+
+        <div class="alert" role="alert" [class.alert-success]="classe.value == 'alert-success' ? 'alert-success' : ''">
+            A simple success alert—check it out!
+        </div>
+        <div class="alert alert-warning" role="alert" [class.alert-warning]="classe.value == 'alert-warning'">
+            A simple warning alert—check it out!
+        </div>
+        <div class="alert alert-danger" role="alert" [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
+            A simple danger alert—check it out!
+        </div>
+    </article>
+</section>
