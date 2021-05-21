@@ -13,6 +13,7 @@ export class DataBindingComponent implements OnInit {
   valorSalvo: string = '';
   isMouseOver: boolean = false;
   textoMouse: string = this.strMouse;
+  nome: string = 'teste';
 
   private resetTextMouse() {
     this.textoMouse = this.strMouse;

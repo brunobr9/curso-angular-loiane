@@ -6,6 +6,8 @@ import { CursosModule } from './cursos/cursos.module';
 import { MeuPrimeiroComponent } from './meu-primeiro/meu-primeiro.component';
 import { MeuPrimeiro2Component } from './meu-primeiro2/meu-primeiro2.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
+import { FormsModule } from '@angular/forms';
+import { MeuFormModule } from './meu-form/meu-form.module';
 
 
 @NgModule({
@@ -16,8 +18,10 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
     DataBindingComponent
   ],
   imports: [ /* outros modulos */
+    FormsModule,
     BrowserModule,
-    CursosModule
+    CursosModule,
+    MeuFormModule
   ],
   providers: [], /* serviços disponíveis (auth, login etc) */
   bootstrap: [AppComponent] /* apenas no módulo raiz, indica o componente a ser instanciado */
