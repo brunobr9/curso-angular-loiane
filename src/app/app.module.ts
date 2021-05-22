@@ -8,14 +8,15 @@ import { MeuPrimeiro2Component } from './meu-primeiro2/meu-primeiro2.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
 import { MeuFormModule } from './meu-form/meu-form.module';
-
+import { InputPropertyComponent } from './input-property/input-property.component';
 
 @NgModule({
   declarations: [ /*  listar componentes, diretivaas e pipes*/
     AppComponent,
     MeuPrimeiroComponent,
     MeuPrimeiro2Component,
-    DataBindingComponent
+    DataBindingComponent,
+    InputPropertyComponent
   ],
   imports: [ /* outros modulos */
     FormsModule,

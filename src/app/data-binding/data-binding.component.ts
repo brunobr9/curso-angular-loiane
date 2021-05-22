@@ -15,6 +15,8 @@ export class DataBindingComponent implements OnInit {
   textoMouse: string = this.strMouse;
   nome: string = 'teste';
 
+  nomeCurso: string = 'Angular';
+
   private resetTextMouse() {
     this.textoMouse = this.strMouse;
   }

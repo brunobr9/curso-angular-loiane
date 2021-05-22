@@ -26,9 +26,11 @@
       <input type="text" [(ngModel)]="nome" />
       <br /><br />
 
-      Nome: <input type="text" [(ngModel)]="pessoa.nome" /> Idade:
-      <input type="text" [(ngModel)]="pessoa.idade" /> Cidade:
-      <input type="text" [(ngModel)]="pessoa.endereco.cidade" />
+      <!-- Nome: <input type="text" [(ngModel)]="pessoa.nome" />  -->
+      <!-- Idade:<input type="text" [(ngModel)]="pessoa.idade" />  -->
+      <!-- Cidade: <input type="text" [(ngModel)]="pessoa.endereco.cidade" /> -->
+
+      <app-meu-form-input-property [pessoa]="pessoa"></app-meu-form-input-property>
 
       <button class="btn btn-primary" (click)="enviar()">Enviar</button>
       <button class="btn btn-warning" (click)="limpar()">Limpar</button>
