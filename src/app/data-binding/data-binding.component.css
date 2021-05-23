@@ -2,3 +2,14 @@
     background-color: blueviolet;
     font-weight: bold;
 }
+
+div {
+    margin-bottom: 10px;
+}
+
+section {
+    padding: 15px;
+    margin: 10px 10px;
+    border: 0.5px solid gray;
+    border-radius: 15px;
+}

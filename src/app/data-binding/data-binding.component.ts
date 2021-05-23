@@ -16,6 +16,10 @@ export class DataBindingComponent implements OnInit {
   nome: string = 'teste';
 
   nomeCurso: string = 'Angular';
+  valor: number = 0;
+  msg: string = '';
+  showMsg: boolean = false;
+  error: boolean = false;
 
   private resetTextMouse() {
     this.textoMouse = this.strMouse;
@@ -62,7 +66,17 @@ export class DataBindingComponent implements OnInit {
     }
   }
 
-  constructor() {}
+  onMudouValor(event: any) {
+    console.log(event.timestamp);
+  }
 
-  ngOnInit(): void {}
+  mostarMensagem(event: any) {
+    this.msg = event.msg;
+    this.showMsg = event.showMsg;
+    this.error = event.error;
+  }
+
+  constructor() { }
+
+  ngOnInit(): void { }
 }

@@ -1,1 +1,15 @@
-<p>{{ nomeCurso }}</p>
+<div>
+  Nome do Curso: <input type="text" [(ngModel)]="nomeCurso" #input />
+  <button class="btn btn-primary" (click)="add(input.value)">Adicionar</button>
+  <button class="btn btn-primary" (click)="sort()">Ordenar</button>
+  <button class="btn btn-primary" (click)="limpar()">Limpar</button>
+  <br>
+
+  <ul *ngFor="let curso of cursos">
+    <li>{{curso}}</li>
+  </ul>
+
+  <!-- {{ nomeCurso }} -->
+</div>
+
+<br /><br />
