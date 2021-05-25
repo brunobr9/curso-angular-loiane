@@ -1,0 +1,5 @@
+<p>diretivas works!</p>
+
+<div *ngIf="response.length > 0">{{response}}</div>
+
+<app-diretiva-ngif [contador]=0 [cursos]="cursos" (response)="onResponse($event)"></app-diretiva-ngif>

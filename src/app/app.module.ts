@@ -10,6 +10,7 @@ import { MeuFormModule } from './meu-form/meu-form.module';
 import { InputPropertyComponent } from './input-property/input-property.component';
 import { OutputPropertyComponent } from './output-property/output-property.component';
 import { CicloComponent } from './ciclo/ciclo.component';
+import { DiretivasModule } from './diretivas/diretivas.module';
 
 @NgModule({
   declarations: [ /*  listar componentes, diretivaas e pipes*/
@@ -24,7 +25,8 @@ import { CicloComponent } from './ciclo/ciclo.component';
     FormsModule,
     BrowserModule,
     CursosModule,
-    MeuFormModule
+    MeuFormModule,
+    DiretivasModule
   ],
   providers: [], /* serviços disponíveis (auth, login etc) */
   bootstrap: [AppComponent] /* apenas no módulo raiz, indica o componente a ser instanciado */

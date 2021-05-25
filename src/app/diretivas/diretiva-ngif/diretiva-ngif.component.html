@@ -1,0 +1,27 @@
+<h5>ngIF</h5>
+
+<section>
+    <h6>nf-if com expressão</h6>
+    <button (click)="add()">Contar</button> {{contador}}
+    <div *ngIf="contador >= max"> Contou até 5! </div>
+</section>
+
+<!-- A arvore DOM não é gerada. Recomendada para árvore de elementos grandes -->
+<section>
+    <h6>nf-if com var boolean</h6>
+    <button (click)="onMostrarCursos()">Mostrar</button>
+    <div *ngIf="!mostrarCursos">Não existem cursos</div>
+    <div *ngIf="mostrarCursos">
+        {{cursos}}
+    </div>
+</section>
+
+<!-- Hidden é mais simples, mas a arvore DOM será carregada -->
+<!-- É menos custoso usar hidden quando arvore DOM é complexa, mas perde em segurança -->
+<section>
+    <h6>Alternativa com hidden</h6>
+    <div [hidden]="mostrarCursos">Não existem cursos</div>
+    <div [hidden]="!mostrarCursos">
+        {{cursos}}
+    </div>
+</section>
