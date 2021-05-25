@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./meu-form.component.css'],
 })
 export class MeuFormComponent implements OnInit {
-  showPessoa: boolean = false;
   nome: string = 'teste-meu-form';
   qtd: number = 0;
 
@@ -20,18 +19,6 @@ export class MeuFormComponent implements OnInit {
     },
   };
 
-  enviar() {
-    this.showPessoa = true;
-  }
-
-  limpar() {
-    this.pessoa.nome = '';
-    this.pessoa.idade = null;
-    this.pessoa.endereco.cidade = '';
-
-    this.showPessoa = false;
-  }
-
   contar(event: KeyboardEvent) {
     this.qtd = (<HTMLInputElement>event.target).value.length;
   }
@@ -40,7 +27,7 @@ export class MeuFormComponent implements OnInit {
     alert(`Digitou ${this.qtd} caracteres`);
   }
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 }

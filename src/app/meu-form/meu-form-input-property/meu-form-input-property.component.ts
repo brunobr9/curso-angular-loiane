@@ -8,7 +8,22 @@ import { Component, Input, OnInit } from '@angular/core';
 export class MeuFormInputPropertyComponent implements OnInit {
   @Input() pessoa: any;
 
-  constructor() {}
+  showPessoa: boolean = false;
 
-  ngOnInit(): void {}
+  constructor() { }
+
+  ngOnInit(): void { }
+
+  enviar() {
+    this.showPessoa = true;
+  }
+
+  limpar() {
+    this.pessoa.nome = '';
+    this.pessoa.idade = null;
+    this.pessoa.endereco.cidade = '';
+
+    this.showPessoa = false;
+  }
+
 }

@@ -5,42 +5,20 @@
       <p>Voce digitou: {{ nome }}</p>
 
       <!-- nao eficiente -->
-      <input
-        type="text"
-        [value]="nome"
-        (input)="nome = $any($event.target).nome"
-      />
+      Nome: <input type="text" [value]="nome" (input)="nome = $any($event.target).nome" />
 
       <br /><br />
 
       <!-- nao eficiente -->
-      <input
-        type="text"
-        [ngModel]="nome"
-        (ngModelChange)="nome = $any($event)"
-      />
+      Nome: <input type="text" [ngModel]="nome" (ngModelChange)="nome = $any($event)" />
 
       <br /><br />
 
       <p>TWO WAY</p>
-      <input type="text" [(ngModel)]="nome" />
+      Nome: <input type="text" [(ngModel)]="nome" />
       <br /><br />
-
-      <!-- Nome: <input type="text" [(ngModel)]="pessoa.nome" />  -->
-      <!-- Idade:<input type="text" [(ngModel)]="pessoa.idade" />  -->
-      <!-- Cidade: <input type="text" [(ngModel)]="pessoa.endereco.cidade" /> -->
 
       <app-meu-form-input-property [pessoa]="pessoa"></app-meu-form-input-property>
-
-      <button class="btn btn-primary" (click)="enviar()">Enviar</button>
-      <button class="btn btn-warning" (click)="limpar()">Limpar</button>
-
-      <p [style.display]="showPessoa ? 'block' : 'none'">
-        Pessoa {{ pessoa.nome }} idade {{ pessoa.idade }} mora em
-        {{ pessoa.endereco.cidade }}
-      </p>
-
-      <br /><br />
 
       Digite aqui:
       <input type="text" (keyup)="contar($event)" (keyup.enter)="total()" />

@@ -1,3 +1,14 @@
-Nome: <input type="text" [(ngModel)]="pessoa.nome" /> 
-Idade:<input type="text" [(ngModel)]="pessoa.idade" /> 
+Nome: <input type="text" [(ngModel)]="pessoa.nome" />
+Idade:<input type="text" [(ngModel)]="pessoa.idade" />
 Cidade: <input type="text" [(ngModel)]="pessoa.endereco.cidade" />
+
+<button class="btn btn-primary" (click)="enviar()">Enviar</button>
+<button class="btn btn-warning" (click)="limpar()">Limpar</button>
+
+
+<p [style.display]="showPessoa ? 'block' : 'none'">
+    Pessoa {{ pessoa.nome }} idade {{ pessoa.idade }} mora em
+    {{ pessoa.endereco.cidade }}
+</p>
+
+<br /><br />

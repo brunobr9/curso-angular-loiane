@@ -1,78 +1,70 @@
-<!-- <section class="property-binding">
-  <article>
-    <h3>Interpolation/Interpolação</h3>
-    <p>String renderizada com interpolação: {{ url }}</p>
-    <p>1 + 1 = {{ 1 + 1 }}</p>
-    <p>1 + 1 + 1 não é {{ 1 + 1 + getValor() }}</p>
-    <p>{{ getTrue() && 1 == 1 }}</p>
-  </article>
-
-  <article>
-    <h3>Property Binding</h3>
-    <img src="{{ urlImg }}" />
-    <img [src]="urlImg" />
-    <img bind-src="urlImg" />
-  </article>
-
-  <article>
-    <h3>Class e Style Binding</h3>
-    <div>
-      <select #classe (change)="(0)">
-        <option value="alert-success">Sucesso</option>
-        <option value="alert-warning">Alerta</option>
-        <option value="alert-danger">Erro</option>
-      </select>
-    </div>
-
-    <div class="alert {{ classe.value }}" role="alert">Texto colorido</div>
-
-    <div class="alert" role="alert" [class.alert-success]="
-        classe.value == 'alert-success' ? 'alert-success' : ''">
-      A simple success alert—check it out!
-    </div>
-
-    <div class="alert" role="alert" [class.alert-warning]="classe.value == 'alert-warning'">
-      A simple warning alert—check it out!
-    </div>
-
-    <div class="alert alert-danger" role="alert" [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
-      A simple danger alert—check it out!
-    </div>
-  </article>
-
-  <article>
-    <h3>Class e Style Binding</h3>
-    <div>
-      <button (click)="buttonClick()" class="btn btn-primary">
-        Click here!
-      </button>
-      <br>
-      <input type="text" #campoInput (keyup)="onKeyUp($event)" (blur)="salvarValor(campoInput.value)"
-        (keyup.enter)="salvarValor($any($event.target).value)" />
-      <p>Valor atual: {{ valorAtual }}</p>
-      <p>Valor salvo: {{ valorSalvo }}</p>
-
-      <span (mouseover)="mouseOver()" (mouseout)="mouseOut()" (click)="mouseClick()" [class.highlight]="isMouseOver"
-        [innerText]="textoMouse">
-      </span>
-    </div>
-  </article>
-</section> -->
-
+<section>
+  <h3>Interpolation/Interpolação</h3>
+  <p>String renderizada com interpolação: {{ url }}</p>
+  <p>1 + 1 = {{ 1 + 1 }}</p>
+  <p>1 + 1 + 1 não é {{ 1 + 1 + getValor() }}</p>
+  <p>{{ getTrue() && 1 == 1 }}</p>
+</section>
 
 <section>
-  <article>
-    <h3>Input/Output Properties</h3>
+  <h3>Property Binding</h3>
+  <img src="{{ urlImg }}" />
+  <img [src]="urlImg" />
+  <img bind-src="urlImg" />
+</section>
 
-    <div id="info" #divMsg class="alert alert-info" role="alert" [style.display]="showMsg ? 'block' : 'none'">
-      {{msg}}
-    </div>
+<section>
+  <h3>Class e Style Binding</h3>
+  <div>
+    <select #classe (change)="(0)">
+      <option value="alert-success">Sucesso</option>
+      <option value="alert-warning">Alerta</option>
+      <option value="alert-danger">Erro</option>
+    </select>
+  </div>
 
-    <div id="erro" #divMsg class="alert alert-danger" role="alert" [style.display]="error ? 'block' : 'none'">
-      {{msg}}
-    </div>
+  <div class="alert {{ classe.value }}" role="alert">Texto colorido</div>
 
-    <app-input-property [nome]="nomeCurso" (mudouCurso)="mostarMensagem($event)"></app-input-property>
-    <contador [valor]="valor" (mudouValor)="onMudouValor($event)"></contador>
-  </article>
+  <div class="alert" role="alert" [class.alert-success]="
+        classe.value == 'alert-success' ? 'alert-success' : ''">
+    A simple success alert—check it out!
+  </div>
+
+  <div class="alert" role="alert" [class.alert-warning]="classe.value == 'alert-warning'">
+    A simple warning alert—check it out!
+  </div>
+
+  <div class="alert alert-danger" role="alert" [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
+    A simple danger alert—check it out!
+  </div>
+
+  <div>
+    <button (click)="buttonClick()" class="btn btn-primary">
+      Click here!
+    </button>
+    <br>
+    <input type="text" #campoInput (keyup)="onKeyUp($event)" (blur)="salvarValor(campoInput.value)"
+      (keyup.enter)="salvarValor($any($event.target).value)" />
+    <p>Valor atual: {{ valorAtual }}</p>
+    <p>Valor salvo: {{ valorSalvo }}</p>
+
+    <span (mouseover)="mouseOver()" (mouseout)="mouseOut()" (click)="mouseClick()" [class.highlight]="isMouseOver"
+      [innerText]="textoMouse">
+    </span>
+  </div>
+</section>
+
+<section>
+  <h3>Input/Output Properties</h3>
+
+  <div id="info" #divMsg class="alert alert-info" role="alert" [style.display]="showMsg ? 'block' : 'none'">
+    {{msg}}
+  </div>
+
+  <div id="erro" #divMsg class="alert alert-danger" role="alert" [style.display]="error ? 'block' : 'none'">
+    {{msg}}
+  </div>
+
+  <app-input-property [nome]="nomeCurso" (mudouCurso)="mostarMensagem($event)"></app-input-property>
+  <contador [valor]="valor" (mudouValor)="onMudouValor($event)"></contador>
 </section>
