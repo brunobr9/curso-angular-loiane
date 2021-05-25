@@ -67,7 +67,7 @@ export class DataBindingComponent implements OnInit {
   }
 
   onMudouValor(event: any) {
-    console.log(event.timestamp);
+    console.log(event);
   }
 
   mostarMensagem(event: any) {

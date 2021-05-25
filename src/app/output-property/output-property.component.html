@@ -2,4 +2,12 @@
   <button class="btn btn-primary" (click)="decrementar()">-</button>
   <input type="text" [value]="valor" readonly />
   <button class="btn btn-primary" (click)="incrementar()">+</button>
+  <br><br>
+</div>
+
+<div>
+  <button class="btn btn-primary" (click)="decrementarDOM()">-</button>
+  <input type="text" [value]="valor" readonly #campoInput />
+  <button class="btn btn-primary" (click)="incrementarDOM()">+</button>
+  <p>ViewChild</p>
 </div>
