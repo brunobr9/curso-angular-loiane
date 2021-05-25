@@ -2,8 +2,10 @@ import { Component } from "@angular/core";
 
 //metatados
 @Component({
-    selector: 'meu-primeiro-component', //nome da tag html que será criada
-    template: `<p> Meu primeiro component com Angular!</p>` //código html 
+    /*nome da tag html que será criada*/
+    selector: 'meu-primeiro-component',
+    /*código html */
+    template: `<p> Meu primeiro component com Angular!</p>`
 })
 export class MeuPrimeiroComponent {
 
