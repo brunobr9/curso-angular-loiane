@@ -1,0 +1,27 @@
+<h5>ngSwitch</h5>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" [class.active]="abaAtiva == 'home'" (click)="abaAtiva = 'home'"
+                        href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a [class.active]="abaAtiva == 'mapa'" class="nav-link" (click)="abaAtiva = 'mapa'"
+                        href="#">Mapa</a>
+                </li>
+                <li class="nav-item">
+                    <a [class.active]="abaAtiva == 'lista'" class="nav-link" (click)="abaAtiva = 'lista'"
+                        href="#">Lista</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container" [ngSwitch]="abaAtiva">
+    <p *ngSwitchDefault> Home </p>
+    <p *ngSwitchCase="'mapa'"> Mapa </p>
+    <p *ngSwitchCase="'lista'"> Lista </p>
+</div>

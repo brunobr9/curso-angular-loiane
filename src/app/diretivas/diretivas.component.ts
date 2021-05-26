@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./diretivas.component.css']
 })
 export class DiretivasComponent implements OnInit {
-
+  abaAtiva: string = "ngif";
   cursos: string[] = ["Java, C++"];
   response: string = '';
 
