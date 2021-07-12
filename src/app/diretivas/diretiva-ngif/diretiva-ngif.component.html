@@ -25,3 +25,14 @@
         {{cursos}}
     </div>
 </section>
+
+<h5>Removendo o * e usando template</h5>
+
+<ng-template [ngIf]="mostrarCursos">
+    <div>(ng-template) Lista de cursos aqui</div>
+</ng-template>
+
+<!-- not working -->
+<div template="ngIf mostrarCursos">
+    (template) Lista de cursos aqui
+</div>

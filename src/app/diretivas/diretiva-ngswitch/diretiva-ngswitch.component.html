@@ -25,3 +25,18 @@
     <p *ngSwitchCase="'mapa'"> Mapa </p>
     <p *ngSwitchCase="'lista'"> Lista </p>
 </div>
+
+<h5>Removento * e usando template</h5>
+<div class="container" [ngSwitch]="abaAtiva">
+    <ng-template [ngSwitchCase]="'mapa'">
+        <p>Mapa</p>
+    </ng-template>
+
+    <ng-template [ngSwitchCase]="'lista'">
+        <p>Lista</p>
+    </ng-template>
+
+    <ng-template [ngSwitchCase]="'home'" ngSwitchDefault>
+        <p>Home</p>
+    </ng-template>
+</div>
