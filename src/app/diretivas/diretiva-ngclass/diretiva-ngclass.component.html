@@ -1,0 +1,27 @@
+<p>Sem diretiva</p>
+<div *ngFor="let jogo of jogos; let i = index">
+  {{ jogo.nome }}
+  <i
+    [class.bi-star]="!jogo.favorito"
+    [class.bi-star-fill]="jogo.favorito"
+    (click)="addFavorito(jogo)"
+  ></i>
+</div>
+
+<br />
+
+<p>diretiva-ngclass</p>
+<div *ngFor="let jogo of jogos; let i = index">
+  <span [ngStyle]="{ color: !jogo.ativo ? 'red' : '' }">{{ jogo.nome }}</span>
+  <em
+    [ngClass]="{ 'bi-star': !jogo.favorito, 'bi-star-fill': jogo.favorito }"
+    (click)="addFavorito(jogo)"
+  >
+  </em>
+
+  <em
+    [ngClass]="{ 'bi-check-circle': !jogo.ativo, 'bi-x-circle': jogo.ativo }"
+    (click)="ativarInativar(jogo)"
+  >
+  </em>
+</div>

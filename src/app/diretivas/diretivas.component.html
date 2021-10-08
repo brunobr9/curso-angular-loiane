@@ -4,12 +4,23 @@
             <li class="nav-item">
                 <a [class.active]="abaAtiva == 'ngif'" (click)="abaAtiva = 'ngif'" class="nav-link" href="#">ngIf</a>
             </li>
+
             <li class="nav-item">
                 <a [class.active]="abaAtiva == 'ngswitch'" (click)="abaAtiva = 'ngswitch'" class="nav-link"
                     href="#">ngSwitch</a>
             </li>
             <li class="nav-item">
                 <a [class.active]="abaAtiva == 'ngfor'" (click)="abaAtiva = 'ngfor'" class="nav-link" href="#">ngFor</a>
+            </li>
+
+            <li class="nav-item">
+                <a [class.active]="abaAtiva == 'ngclass'" (click)="abaAtiva = 'ngclass'" class="nav-link"
+                    href="#">ngClass</a>
+            </li>
+
+            <li class="nav-item">
+                <a [class.active]="abaAtiva == 'ngstyle'" (click)="abaAtiva = 'ngstyle'" class="nav-link"
+                    href="#">ngStyle</a>
             </li>
         </ul>
     </div>
@@ -22,4 +33,6 @@
     </app-diretiva-ngif>
     <app-diretiva-ngswitch *ngSwitchCase="'ngswitch'"></app-diretiva-ngswitch>
     <app-diretiva-ngfor *ngSwitchCase="'ngfor'"></app-diretiva-ngfor>
+    <app-diretiva-ngclass *ngSwitchCase="'ngclass'"></app-diretiva-ngclass>
+    <app-diretiva-ngstyle *ngSwitchCase="'ngstyle'"></app-diretiva-ngstyle>
 </div>
