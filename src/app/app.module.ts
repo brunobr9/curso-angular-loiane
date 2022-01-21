@@ -11,6 +11,7 @@ import { InputPropertyComponent } from './input-property/input-property.componen
 import { OutputPropertyComponent } from './output-property/output-property.component';
 import { CicloComponent } from './ciclo/ciclo.component';
 import { DiretivasModule } from './diretivas/diretivas.module';
+import { OperadorElvisComponent } from './operador-elvis/operador-elvis.component';
 
 @NgModule({
   declarations: [ /*  listar componentes, diretivaas e pipes*/
@@ -19,7 +20,8 @@ import { DiretivasModule } from './diretivas/diretivas.module';
     DataBindingComponent,
     InputPropertyComponent,
     OutputPropertyComponent,
-    CicloComponent
+    CicloComponent,
+    OperadorElvisComponent
   ],
   imports: [ /* outros modulos */
     FormsModule,
