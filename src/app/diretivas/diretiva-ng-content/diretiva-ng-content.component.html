@@ -1,0 +1,17 @@
+<div class="card">
+  <div class="card-header">
+    <ng-content select=".header"></ng-content>
+  </div>
+
+  <div class="card-body">
+    <h5 class="card-title">
+      <ng-content select=".titulo"></ng-content>
+    </h5>
+    <p class="card-text">
+      <ng-content select=".texto"></ng-content>
+    </p>
+    <button class="btn btn-primary">
+      <ng-content select=".button"></ng-content>
+    </button>
+  </div>
+</div>

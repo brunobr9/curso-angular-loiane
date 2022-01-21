@@ -22,6 +22,11 @@
                 <a [class.active]="abaAtiva == 'ngstyle'" (click)="abaAtiva = 'ngstyle'" class="nav-link"
                     href="#">ngStyle</a>
             </li>
+
+            <li class="nav-item">
+                <a [class.active]="abaAtiva == 'ngContent'" (click)="abaAtiva = 'ngContent'" class="nav-link"
+                    href="#">ngContent</a>
+            </li>
         </ul>
     </div>
 </nav>
@@ -35,4 +40,10 @@
     <app-diretiva-ngfor *ngSwitchCase="'ngfor'"></app-diretiva-ngfor>
     <app-diretiva-ngclass *ngSwitchCase="'ngclass'"></app-diretiva-ngclass>
     <app-diretiva-ngstyle *ngSwitchCase="'ngstyle'"></app-diretiva-ngstyle>
+    <app-diretiva-ng-content *ngSwitchCase="'ngContent'">
+        <div class="header">Featured</div>
+        <div class="titulo">Special title treatment</div>
+        <div class="texto">With supporting text below as a natural lead-in to additional content</div>
+        <div class="button">Go somewhere</div>
+    </app-diretiva-ng-content>
 </div>
