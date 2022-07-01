@@ -1,38 +1,47 @@
-<h5>ngIF</h5>
+<h4>ngIF</h4>
 
 <section>
-    <h6>nf-if com expressão</h6>
-    <button (click)="add()">Contar</button> {{contador}}
-    <div *ngIf="contador >= max"> Contou até 5! </div>
+  <h5>nf-if com expressão</h5>
+  <button (click)="add()">Contar</button> {{ contador }}
+  <div *ngIf="contador >= max">Contou até 5!</div>
 </section>
 
 <!-- A arvore DOM não é gerada. Recomendada para árvore de elementos grandes -->
 <section>
-    <h6>nf-if com var boolean</h6>
-    <button (click)="onMostrarCursos()">Mostrar</button>
-    <div *ngIf="!mostrarCursos">Não existem cursos</div>
-    <div *ngIf="mostrarCursos">
-        {{cursos}}
-    </div>
+  <h5>nf-if com var boolean</h5>
+  <button (click)="onMostrarCursos()">Mostrar</button>
+  <div *ngIf="!mostrarCursos">Não existem cursos</div>
+  <div *ngIf="mostrarCursos">
+    {{ cursos }}
+  </div>
 </section>
 
 <!-- Hidden é mais simples, mas a arvore DOM será carregada -->
 <!-- É menos custoso usar hidden quando arvore DOM é complexa, mas perde em segurança -->
 <section>
-    <h6>Alternativa com hidden</h6>
-    <div [hidden]="mostrarCursos">Não existem cursos</div>
-    <div [hidden]="!mostrarCursos">
-        {{cursos}}
-    </div>
+  <h5 fundoAzul>Alternativa com hidden</h5>
+  <div [hidden]="mostrarCursos">Não existem cursos</div>
+  <div [hidden]="!mostrarCursos">
+    {{ cursos }}
+  </div>
 </section>
 
-<h5>Removendo o * e usando template</h5>
+<section>
+  <h5 fundoAzul>Removendo o * e usando template</h5>
 
-<ng-template [ngIf]="mostrarCursos">
+  <ng-template [ngIf]="mostrarCursos">
     <div>(ng-template) Lista de cursos aqui</div>
-</ng-template>
+  </ng-template>
+</section>
 
 <!-- not working -->
-<div template="ngIf mostrarCursos">
-    (template) Lista de cursos aqui
-</div>
+<!-- <div template="ngIf mostrarCursos">(template) Lista de cursos aqui</div> -->
+
+<section>
+  <h5 fundoAzul>Diretivas Customizadas</h5>
+
+  <div *ngIf="mostrarCursos">Cursos: {{cursos}}</div>
+  <div *ngElse="mostrarCursos">Não há cursos</div>
+
+  <ng-template [ngElse]="mostrarCursos"> <div>Não há cursos</div> </ng-template>
+</section>
