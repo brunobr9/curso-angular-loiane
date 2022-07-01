@@ -12,7 +12,6 @@ import { OutputPropertyComponent } from './output-property/output-property.compo
 import { CicloComponent } from './ciclo/ciclo.component';
 import { DiretivasModule } from './diretivas/diretivas.module';
 import { OperadorElvisComponent } from './operador-elvis/operador-elvis.component';
-
 @NgModule({
   declarations: [ /*  listar componentes, diretivaas e pipes*/
     AppComponent,
@@ -21,7 +20,7 @@ import { OperadorElvisComponent } from './operador-elvis/operador-elvis.componen
     InputPropertyComponent,
     OutputPropertyComponent,
     CicloComponent,
-    OperadorElvisComponent
+    OperadorElvisComponent,
   ],
   imports: [ /* outros modulos */
     FormsModule,

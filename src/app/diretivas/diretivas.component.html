@@ -27,6 +27,11 @@
                 <a [class.active]="abaAtiva == 'ngContent'" (click)="abaAtiva = 'ngContent'" class="nav-link"
                     href="#">ngContent</a>
             </li>
+
+            <li class="nav-item">
+                <a [class.active]="abaAtiva == 'ngCustom'" (click)="abaAtiva = 'ngCustom'" class="nav-link"
+                    href="#">ngCustom</a>
+            </li>
         </ul>
     </div>
 </nav>
@@ -46,4 +51,5 @@
         <div class="texto">With supporting text below as a natural lead-in to additional content</div>
         <div class="button">Go somewhere</div>
     </app-diretiva-ng-content>
+    <app-diretivas-customizadas *ngSwitchCase="'ngCustom'"></app-diretivas-customizadas>
 </div>

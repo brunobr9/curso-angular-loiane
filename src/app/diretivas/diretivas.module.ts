@@ -8,6 +8,8 @@ import { DiretivaNgswitchComponent } from './diretiva-ngswitch/diretiva-ngswitch
 import { DiretivasComponent } from './diretivas.component';
 import { FormsModule } from '@angular/forms';
 import { DiretivaNgContentComponent } from './diretiva-ng-content/diretiva-ng-content.component';
+import { DiretivasCustomizadasComponent } from './diretivas-customizadas/diretivas-customizadas.component';
+import { FundoAzulDirective } from './shared/fundo-azul.directive';
 @NgModule({
   declarations: [
     DiretivasComponent,
@@ -17,6 +19,8 @@ import { DiretivaNgContentComponent } from './diretiva-ng-content/diretiva-ng-co
     DiretivaNgstyleComponent,
     DiretivaNgclassComponent,
     DiretivaNgContentComponent,
+    DiretivasCustomizadasComponent,
+    FundoAzulDirective
   ],
   imports: [CommonModule, FormsModule],
   exports: [DiretivasComponent],
