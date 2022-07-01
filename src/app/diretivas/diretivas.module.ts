@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { DiretivaNgContentComponent } from './diretiva-ng-content/diretiva-ng-content.component';
 import { DiretivasCustomizadasComponent } from './diretivas-customizadas/diretivas-customizadas.component';
 import { FundoAzulDirective } from './shared/fundo-azul.directive';
+import { HighlightMouseDirective } from './shared/highlight-mouse.directive';
 @NgModule({
   declarations: [
     DiretivasComponent,
@@ -20,7 +21,8 @@ import { FundoAzulDirective } from './shared/fundo-azul.directive';
     DiretivaNgclassComponent,
     DiretivaNgContentComponent,
     DiretivasCustomizadasComponent,
-    FundoAzulDirective
+    FundoAzulDirective,
+    HighlightMouseDirective
   ],
   imports: [CommonModule, FormsModule],
   exports: [DiretivasComponent],
